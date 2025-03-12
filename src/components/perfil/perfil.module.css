@@ -7,9 +7,19 @@
   align-items: center;
 
   & p {
+
     font-weight: 500;
     line-height: 24px;
     margin-top: 8px;
+    cursor: pointer;
+    background-color: var(--surface-color); /* Adicione a cor de fundo desejada */
+ /* Adicione a cor da borda desejada */
+    color: var(--text-color); /* Adicione a cor do texto desejada */
+    font-size: 15px;
+    margin-top: 0px;
+    padding: 8px 16px; /* Adicione padding para criar o efeito de retângulo */
+    text-decoration: none; /* Remova a decoração de texto */
+    border-radius: 4px; ;
   }
 }
 
@@ -25,8 +35,39 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.2);
-
   }
+}
+
+#perfilButton {
+  cursor: pointer;
+  background: var(--surface-color); /* Adicione a cor de fundo desejada */
+/* Adicione a cor da borda desejada */
+  color: var(--text-color); /* Adicione a cor do texto desejada */
+  font-size: 24px;
+  margin-top: 16px;
+  padding: 8px 16px; /* Adicione padding para criar o efeito de retângulo */
+  text-decoration: none; /* Remova a decoração de texto */
+  border-radius: 4px; /* Adicione bordas arredondadas, se desejar */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adicione transições suaves */
+}
+
+#perfilButton:hover {
+  background: var(--surface-color-hover); /* Cor de fundo ao passar o mouse */
+  color: var(--text-color); /* Cor do texto ao passar o mouse */
+}
+
+#perfilMenu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+#perfilMenu.active {
+  display: flex;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
